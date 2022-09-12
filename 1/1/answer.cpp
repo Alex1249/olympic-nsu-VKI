@@ -1,4 +1,6 @@
-#include <cstdio>
+#include <iostream>
+
+using namespace std;
 
 int isPrime(int n) {
     if (n == 1) return false;
@@ -13,8 +15,10 @@ int isPrime(int n) {
 
 int main() {
     int n;
-    scanf_s("%d", &n);
-    printf(isPrime(n) ? "YES" : "NO");
+    cin >> n;
+    if (isPrime(n)) cout << "YES" << endl;
+    else cout << "NO" << endl;
+
     return 0;
 }
 

@@ -1,4 +1,7 @@
-#include <cstdio>
+#include <iostream>
+
+using namespace std;
+
 
 int isPrime(int n){
     if (n == 1) return false;
@@ -9,11 +12,12 @@ int isPrime(int n){
     return true;
 }
 
-int main(){
+int main() {
     int n;
-    scanf("%d", &n);
-    for (int i = 2; i <= n; i++)
-        if (isPrime(i)) printf("%d ", i);
+    cin >> n;
+    for (int i = 2; i <= n; i++) {
+        if (isPrime(i)) cout << i << ' ';
+    }
 }
 
 // Written with love.By Alexey Kuznetsov.

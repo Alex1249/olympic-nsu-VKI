@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int isPrime(int n){
+int isPrime(int n) {
     if (n == 1) return false;
     if (n == 2) return true;
     if (n % 2 == 0) return false;
@@ -13,12 +13,12 @@ int isPrime(int n){
 }
 
 int main() {
-    int q = 0, n = 0, x=0;
+    int q = 0, n = 0, x = 0;
     cin >> n >> q;
     for (int i = 0; i < q; i++) {
         cin >> x;
-        if (isPrime(x))cout << x<<" prime"<<endl;
-        else cout << x<<" not"<<endl;
+        if (isPrime(x)) cout << x << " prime" << endl;
+        else cout << x<< " not" << endl;
     }
     return 0;
 }
