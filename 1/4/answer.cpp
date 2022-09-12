@@ -18,7 +18,7 @@ int main() {
     for (int i = 0; i < q; i++) {
         cin >> x;
         if (isPrime(x)) cout << x << " prime" << endl;
-        else cout << x<< " not" << endl;
+        else cout << x << " not" << endl;
     }
     return 0;
 }
