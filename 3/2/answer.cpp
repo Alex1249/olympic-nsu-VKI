@@ -41,3 +41,18 @@ void CTTsd(std::string str, int base) {
     }
     
 }
+
+
+int main()
+{
+    string n = "";
+    int b;
+    cin >> b;
+    cin >> n;
+    CTTsd(n, b);
+    string OUTREV = OUTPUT;
+    reverse(OUTREV.begin(), OUTREV.end());
+    if (OUTREV.empty()) cout << 0;
+    cout << OUTREV;
+    return 0;
+}
