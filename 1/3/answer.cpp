@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     int n;
-    std::vector<int> arr;
+    vector<int> arr;
 
     cin >> n;
 
