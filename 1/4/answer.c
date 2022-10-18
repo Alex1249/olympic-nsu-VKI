@@ -12,8 +12,7 @@ int isPrime(int n) {
 
 int main() {
     int q, n, x;
-    scanf("%d", &n);
-    scanf("%d", &q);
+    scanf("%d %d", &n, &q);
     for (int i = 0; i < q; i++) {
         scanf("%d", &x);
         printf(isPrime(x) ? "%d prime\n" : "%d not\n", x);
