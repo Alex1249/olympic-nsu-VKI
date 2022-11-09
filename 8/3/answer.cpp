@@ -1,9 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
-#include <math.h>
 #include <ctime>
-#include <sstream>
 using namespace std;
 
 void ins_sort(int* mas, int size) {
