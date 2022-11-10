@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string.h>
+#include <math.h>
+#include <algorithm>
 using namespace std;
 
 string OUTPUT = "";
