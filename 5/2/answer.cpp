@@ -1,9 +1,7 @@
 #include <iostream>
-#include <time.h>
-#include <stdio.h>
 using namespace std;
 
-int invtav_permut(int a[], int b[], int n) {
+int invtav_permut(const int a[], int b[], int n) {
     for (int i = 1; i <= n; i++) {
         int spaceCount = 0;
         for (int j = 0; j < n; j++) {
@@ -28,12 +26,12 @@ int main() {
     cin >> n;
 
     int* a = new int[n];
-    int* b = new int[n] {
-        0
-    };
+    int* b = new int[n] { 0 };
+
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
+
     if (!invtav_permut(a, b, n)) cout << "NO";
     return 0;
 }

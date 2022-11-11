@@ -15,9 +15,12 @@ int isPrime(int n){
 int main() {
     int n;
     cin >> n;
+
     for (int i = 2; i <= n; i++) {
         if (isPrime(i)) cout << i << ' ';
     }
+
+    return 0;
 }
 
 // Written with love.By Alexey Kuznetsov.

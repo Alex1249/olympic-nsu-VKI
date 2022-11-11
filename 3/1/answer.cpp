@@ -1,38 +1,38 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+
 using namespace std;
 
-string OUTPUT = "";
 
-
-char get(int n)
-{
-  if(n < 10)
-    return n + '0';
-  else
-    return n + 87;
-}
-
-void CTTsd(int n, int base) {
-
-  while(n>0){
-    OUTPUT+=get(n%base);
-    n=n/base;
+char get(int n) {
+  if (n < 10) {
+      return (char)(n + '0');
+  } else {
+      return (char)(n + 87);
   }
 }
 
+string CTTsd(int n, int base) {
+    string out = "";
+    while(n > 0) {
+        out += get(n % base);
+        n /= base;
+    }
 
-int main()
-{
-  int n;
-  int b;
-  cin >> b;
-  cin >> n;
-  CTTsd(n,b);
-  string OUTREV = OUTPUT;
-  reverse(OUTREV.begin(), OUTREV.end());
-  if(OUTREV.empty()) cout<< 0;
-  cout<<OUTREV;
+    return out;
+}
+
+
+int main() {
+  int n, b;
+  cin >> b >> n;
+
+  string out = CTTsd(n,b);
+  reverse(out.begin(), out.end());
+
+  if (out.empty()) cout << 0;
+  cout << out;
+
   return 0;
 } 

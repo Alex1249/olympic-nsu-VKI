@@ -20,11 +20,13 @@ int main() {
             }
         }
     }
+
     for (int i = 2; i < n + 1; i++) {
         if (arr[i]) {
             cout << arr[i] << ' ';
         }
     }
+
     return 0;
 }
 // Written with love.By Alexey Kuznetsov

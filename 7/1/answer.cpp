@@ -1,8 +1,10 @@
 #include <iostream>
+
 using namespace std;
 
+
 void ins_sort(int* a, int n) {
-	int j = 0, e, x;
+	int j, x;
 	for (int i = 0; i < n; i++) {
 		x = a[i];
 		j = i - 1;
@@ -15,17 +17,21 @@ void ins_sort(int* a, int n) {
 }
 
 int main() {
-	int n, i = 0;
+	int n;
 	cin >> n;
+
 	int* a = new int[n];
-	while (i < n) {
-		cin >> a[i];
-		i++;
-	}
+
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
 	ins_sort(a, n);
 	cout << '\n';
+
 	for (int i = 0; i < n; i++) {
 		cout << a[i] << " ";
 	}
+
 	return 0;
 }

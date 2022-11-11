@@ -1,13 +1,13 @@
 #include <iostream>
+
 using namespace std;
 
-void f(float* a, int n, int x)
-{
+
+void f(float* a, int n, int x) {
 	int b, c, d;
 	b = 0;
 	c = n - 1;
-	while (1 < (c - b))
-	{
+	while (1 < (c - b)) {
 		d = (c + b) / 2;
 		if (a[d] < x) b = d;
 		else c = d;
@@ -16,9 +16,9 @@ void f(float* a, int n, int x)
 	else cout << c;
 }
 
-int main()
-{
-	int n, x, c;
+
+int main() {
+	int n, x;
 	float* a;
 	cin >> n >> x;
 	a = (float*)malloc(sizeof(float) * n);

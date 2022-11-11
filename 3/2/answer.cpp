@@ -1,58 +1,66 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
-#include <math.h>
+#include <cmath>
+
 using namespace std;
 
-string OUTPUT = "";
 
-
-int get(char n)
-{
-    if (n < 87)
+int get(char n) {
+    if (n < 87) {
         return n - '0';
-    else
+    }
+    else {
         return n - 87;
+    }
 }
 
-char get_char(int n)
-{
-    if (n < 10)
-        return n + '0';
-    else
-        return n + 87;
+
+char get_char(int n) {
+    if (n < 10) {
+        return (char)(n + '0');
+    } else {
+        return (char)(n + 87);
+    }
 }
-void CTTsd(std::string str, int base) {
-    int count = 0;
-    int rez = 0;
-    for (int i = str.length()-1; i >= 0; i--)
-    {
+
+
+string CTTsd(string str, int base) {
+
+
+    string out = "";
+
+    int rez = 0, count = 0;
+    for (int i = str.length() - 1; i >= 0; i--) {
         int n = get(str[i]);
-        int value = 0;
-        value = n * pow(base, count);
+        int value = n * pow(base, count);
         rez += value;
         count++;
     }
+
     int tw = rez;
     while (tw > 0) {
         int value = tw % 10;
-        OUTPUT += get_char(value);
+        out += get_char(value);
         tw = tw / 10;
     }
-    
+
+    return out;
 }
 
 
 int main()
 {
-    string n = "";
     int b;
+    string n = "";
     cin >> b;
     cin >> n;
-    CTTsd(n, b);
-    string OUTREV = OUTPUT;
-    reverse(OUTREV.begin(), OUTREV.end());
-    if (OUTREV.empty()) cout << 0;
-    cout << OUTREV;
+
+    string output = CTTsd(n, b);
+    reverse(output.begin(), output.end());
+
+    if (output.empty()) cout << 0;
+    cout << output;
+
     return 0;
 }
