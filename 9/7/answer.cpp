@@ -1,42 +1,55 @@
-using namespace std;
-#include <iostream>
-#include <fstream>
 #include <stdio.h>
-#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <math.h>
+using namespace std;
 
-int rev(int from);
 
-int main() {
-	int quantity, amount = 0, byte;
-	bool flag = true;
-	ifstream inp;
-	inp.open("input.bin", ios::binary | ios::in);
-	inp.read((char*)&quantity, sizeof(int));
-	if (quantity >= 1 && quantity <= 10000) flag = true;
-	else {
-		flag = false;
-		quantity = rev(quantity);
+void merge(const int* a, int ak, const int* b, int bk, int* r) {
+	int i = 0, j = 0, k = 0, x;
+	while ((i < ak) || (j < bk)) {
+		if (i == ak)
+			x = b[j++];
+		else if (j == bk)
+			x = a[i++];
+		else if (a[i] < b[j])
+			x = a[i++];
+		else x = b[j++];
+		r[k++] = x;
 	}
-	for (int i = 0; i < quantity; i++) {
-		inp.read((char*)&byte, sizeof(int));
-		if (!flag) byte = rev(byte);
-		amount += byte;
-	}
-	ofstream outp;
-	if (!flag) amount = rev(amount);
-	outp.open("output.bin", ios::binary | ios::out);
-	outp.write((char*)&amount, sizeof(int));
-	inp.close();
-	outp.close();
 }
+int main() {
+	long signed N = 0, M = 0;
+	FILE* in = NULL;
+	FILE* out = NULL;
 
-int rev(int a) {
-	int t;
-	char* f_byte = (char*)&a;
-	char* t_byte = (char*)&t;
-	t_byte[0] = f_byte[3];
-	t_byte[1] = f_byte[2];
-	t_byte[2] = f_byte[1];
-	t_byte[3] = f_byte[0];
-	return t;
+	in = fopen("input.bin", "rb");
+	out = fopen("output.bin", "wb");
+	fread(&N, sizeof(int), 1, in);
+	fread(&M, sizeof(int), 1, in);
+
+	int* a = new int[N]();
+	int* b = new int[M]();
+
+	int* r = new int[N + M]();
+
+	for (int i = 0; i < N; i++)
+		fread(&a[i], sizeof(int), 1, in);
+	for (int i = 0; i < M; i++)
+		fread(&b[i], sizeof(int), 1, in);
+
+	merge(a, N, b, M, r);
+	for (int i = 0; i < N + M; i++) {
+		fwrite(&r[i], sizeof(int), 1, out);
+	}
+
+	delete[] a;
+
+	delete[] b;
+
+	delete[] r;
+
+	fclose(in);
+
+	fclose(out);
+	return 0;
 }
