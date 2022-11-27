@@ -1,0 +1,8 @@
+p u will be given an initial configuration and a list of rotations 
+a rotation will be represented by an integer number indicating the 
+P ce to be rotated and the direction of the rotation a positive value 
+means clockwise rotation negative value means counter clockwise 
+rotation faces of the cube are numbered as shown in figure you must 
+  ite a program that checks whether the list of rotations will lead 
+
+to a winning configuration

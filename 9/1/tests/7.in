@@ -1,0 +1,7 @@
+theinputcontains several test cases the first line of the input 
+is an integer which indicates the number of tests each test description 
+consists of ten lines of input the first nine lines of a test will 
+describe an initial configuration in the format shown in figure the 
+6 xt line will contain a list of rotations ending with the value for 
+$ ch test case your program should print one line if your grandpa is 
+correct print yes grandpa otherwise print no you are wrong

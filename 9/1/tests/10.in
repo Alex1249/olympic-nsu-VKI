@@ -1,0 +1,28 @@
+indianajonesisina deserted city annihilated during a war roofs of
+ all houses have been destroyed and only portions of walls are still
+ standing the ground is so full of mines that the only safe way to 
+move around the city is walking over the remaining walls the mission of 
+our hero is to save a person who is trapped in the city in order to move 
+¤tween two walls which are not connected indiana jones thought of taking 
+with him a wooden board which he could place between the two walls and then 
+cross from one to the other initial positions of indiana jones and the 
+trapped person are both on some section of the walls besides walls are 
+either in the direction southnorth or westeast you will be given a map 
+of the city remains your mission is to determine the minimum length of 
+the wooden board indiana jones needs to carry in order to get to the 
+trapped person input your program should process several test cases 
+each test case starts with an integer n indicating the number of wall 
+sections remaining in the city each of the next n lines describes a wall
+ section the first wall section to appear is the section where indiana 
+jones stands at the beginning the second section to appear is the section 
+where the trapped person stands each wall section description consists of 
+three integers x y and l where x an y define either the southernmost point
+ of a wall section for southnorth sections or the westernmost point for 
+westeast wall sections the value of l determines the length and direction 
+ the wall if l the section is westeast with length l if l the section is 
+rthsouth with length the end of input is indicated by output for each test
+ case in the input your program should produce one line of output containing 
+a real value representing the length of the wooden board indiana jones must
+ carry the length must be printed as a real number with twodigit precision 
+and the last decimal digit must be rounded the input will not contain test 
+cases where differences in rounding are significant
