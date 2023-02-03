@@ -1,7 +1,10 @@
-#include <iostream>
-#include <stdio.h>
-
 using namespace std;
+#include <iostream>
+#include <stdlib.h>s
+#include <stdio.h>
+#include <conio.h>
+#define ERROR_FILE_OPEN -3
+
 void sortByMerge(int* arr, int n);
 
 int main() {
