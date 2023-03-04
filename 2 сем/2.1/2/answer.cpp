@@ -1,7 +1,7 @@
 #include <iostream>
 
-
 using namespace std;
+
 int readTime ( char * iStr , int * oHours , int * oMinutes , int * oSeconds ){
     int h = 0, m = 0, s = 0;
     int match = sscanf(iStr,"%d:%d:%d", &h, &m, &s);
